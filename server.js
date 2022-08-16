@@ -4,7 +4,11 @@ const path=require('path');
 const app=express();
 const port= process.env.PORT||4040;
 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true})); //The bodyParser will populate the req.body property with the parsed body from the request. 
+//With the Line 2 you will just get one to you use in your class via require. Returns middleware that only parses urlencoded bodies. 
+//This parser accepts only UTF-8 encoding of the body and supports automatic inflation of gzip and deflate encodings.
+
+
 
 //send file we got here
 app.get('/',function(req,res)
